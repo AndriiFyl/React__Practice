@@ -1,0 +1,31 @@
+.Wrapper {
+    display: block;
+    min-width: 300px;
+    text-align: center;
+    margin: 40px;
+}
+
+.Markers__wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.Img {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 2%;
+}
+
+.Button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(79, 146, 239);
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
