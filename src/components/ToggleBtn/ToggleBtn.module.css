@@ -1,0 +1,19 @@
+.DivWrapper {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.Btn {
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5%;
+    background-color: rgb(168, 194, 229);
+    border: none;
+    color: rgb(84, 138, 219);
+}

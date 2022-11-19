@@ -1,15 +1,26 @@
 import { useState } from 'react';
 import css from './ImgSlider.module.css';
+import { FcLeft, FcRight } from 'react-icons/fc';
+//   useEffect(() => {
+//     // setInterval(() => {
+//     //   handleClickIncremet();
+//     // }, 2000);
+//   }, []);
 
 export default function ImgSlider() {
   const [index, setIndex] = useState(0);
 
+  const images = [
+    'https://zastavok.net/ts/zima/166724994979.jpg',
+    'https://zastavok.net/ts/animals/166724814396.jpg',
+    'https://zastavok.net/ts/minimalizm/166724982136.jpg',
+    'https://zastavok.net/ts/sport/166724958674.jpg',
+  ];
+
   const handleClickIncremet = () => {
-    console.log(index);
     if (index === images.length - 1) {
       setIndex(0);
     } else {
-      console.log('here2');
       setIndex(prevIndex => prevIndex + 1);
     }
   };
@@ -22,25 +33,13 @@ export default function ImgSlider() {
     }
   };
 
-  const images = [
-    'https://zastavok.net/ts/zima/166724994979.jpg',
-    'https://zastavok.net/ts/animals/166724814396.jpg',
-    'https://zastavok.net/ts/minimalizm/166724982136.jpg',
-    'https://zastavok.net/ts/sport/166724958674.jpg',
-  ];
-
-  //   useEffect(() => {
-  //     // setInterval(() => {
-  //     //   handleClickIncremet();
-  //     // }, 2000);
-  //   }, []);
-
   return (
     <div className={css.Wrapper}>
-      <img className={css.Img} src={images[index]} alt="pictures" />
+      <img className={css.Img} src={images[index]} alt="img" />
 
       <div className={css.Markers__wrapper}>
         {images.map((image, idx) => {
+          // [div[0], div[1], div[2], div[3]]
           return (
             <div
               key={idx}
@@ -59,18 +58,20 @@ export default function ImgSlider() {
       <button
         className={css.Button}
         type="button"
-        onClick={handleClickIncremet}
-        // disabled={images.length - 1 === index}
-      >
-        +
-      </button>
-      <button
-        className={css.Button}
-        type="button"
         onClick={handleClickDecrement}
         // disabled={0 === index}
       >
-        -
+        <FcLeft />
+      </button>
+
+      <button
+        className={css.Button}
+        type="button"
+        onClick={handleClickIncremet}
+
+        // disabled={images.length - 1 === index}
+      >
+        <FcRight />
       </button>
     </div>
   );

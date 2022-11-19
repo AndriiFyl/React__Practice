@@ -17,12 +17,12 @@ export default function ToggleBtn() {
     // setIsShown(!isShown);
   };
   return (
-    <div>
-      <button type="button" onClick={handleClick}>
+    <div className={css.DivWrapper}>
+      <button className={css.Btn} type="button" onClick={handleClick}>
         {isShown ? 'hide' : 'show'}{' '}
       </button>
       {isShown && (
-        <p>
+        <p className={css.Description__text}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
           eaque qui at tempora itaque! Fuga temporibus beatae quas, suscipit est
           facilis iure adipisci corrupti excepturi, laborum, aliquid totam

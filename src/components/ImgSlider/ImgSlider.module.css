@@ -24,8 +24,10 @@
     height: 40px;
     border-radius: 50%;
     border: none;
-    background-color: rgb(79, 146, 239);
+    background-color: rgb(168, 194, 229);
     margin: 5px;
     font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
+    
 }
